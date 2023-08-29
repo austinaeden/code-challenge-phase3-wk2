@@ -1,11 +1,11 @@
-class review:
+class Review:
     all_review = []
 
     def __init__(self, customer: str, restaurant: str, rating: (int, float)):
         self._customer = customer
         self ._restaurant = restaurant
         self._rating = rating
-        review.all_review.append(self)
+        Review.all_review.append(self)
     
     def rating(self):
         return self._rating

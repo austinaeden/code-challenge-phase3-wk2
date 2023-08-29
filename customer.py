@@ -1,11 +1,12 @@
-class customer:
+from review import Review
+class Customer:
     all_customers = []
 
     def __init__(self, given_name=None,  family_name=None):
         self._given_name = given_name
         self._family_name = family_name
         self._full_name = f"{given_name} {family_name}"
-        customer.all_customers.append(self)
+        Customer.all_customers.append(self)
     
     def given_name(self):
         return self._given_name
@@ -35,3 +36,9 @@ class customer:
     @classmethod
     def all(cls):
         return cls.all_customers
+    
+    def restaurants(self):
+        return set([review.restaurant() for review in Review.all() if review.customer() in self.full_name()])
+    
+    def add_review(self, restaurant, rating):
+        Review(Customer.full_name(self), restaurant, rating)
