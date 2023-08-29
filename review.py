@@ -19,3 +19,5 @@ class review:
     @classmethod
     def all(cls):
         return cls.all_review
+    
+    
