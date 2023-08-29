@@ -42,3 +42,18 @@ class Customer:
     
     def add_review(self, restaurant, rating):
         Review(Customer.full_name(self), restaurant, rating)
+
+    @classmethod
+    def find_by_name(cls, name):
+        for customer in cls.customers:
+            if customer.full_name() == name:
+                return customer
+            else:
+                print("customer cannot be found")
+
+    @classmethod
+    def find_all_by_given_name(cls, name):
+        return [customer for customer in Customer.all() if customer.given_name == name]
+    
+    def __repr__(self):
+        return f"{self._given_name} {self._family_name}"
