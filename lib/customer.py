@@ -47,7 +47,7 @@ class Customer:
     @classmethod
     def find_by_name(cls, name):
         for customer in cls.all_customers:
-            if customer._full_name() == name:
+            if customer._full_name == name:
                 return customer
             else:
                 print("customer cannot be found")
@@ -63,4 +63,5 @@ class Customer:
 customer1= Customer("austin","mbogo")
 customer2= Customer("John","mbogo")
 
-print(customer1.find_by_name("austin mbogo"))
+print(Customer.find_by_name("aeden mbogo"))
+print(Customer.find_all_by_given_name("John"))
