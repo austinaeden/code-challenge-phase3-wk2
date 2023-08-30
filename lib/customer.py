@@ -1,4 +1,4 @@
-from review import Review
+from lib.review import Review
 class Customer:
     all_customers = []
 

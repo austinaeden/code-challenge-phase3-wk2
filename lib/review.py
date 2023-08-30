@@ -20,4 +20,5 @@ class Review:
     def all(cls):
         return cls.all_review
     
-    
+    def __repr__(self):
+        return f"{self._customer}, {self._restaurant}, {self._rating}"
