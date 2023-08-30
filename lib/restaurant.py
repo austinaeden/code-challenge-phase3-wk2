@@ -1,4 +1,4 @@
-from lib.review import Review
+from review import Review
 class Restaurant:
 
     def __init__(self, name: str):
@@ -21,3 +21,10 @@ class Restaurant:
         total_ratings = sum(review.rating() for review in self.reviews())
         average = total_ratings / len(self.reviews())
         return average
+    
+
+restaurant1= Restaurant("highlands")
+restaurant2= Restaurant("lowlands")
+
+print(restaurant1.average_rating())
+print(restaurant2.average_rating())

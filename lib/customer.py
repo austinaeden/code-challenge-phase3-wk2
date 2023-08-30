@@ -1,4 +1,5 @@
-from lib.review import Review
+from review import Review
+
 class Customer:
     all_customers = []
 
@@ -45,15 +46,21 @@ class Customer:
 
     @classmethod
     def find_by_name(cls, name):
-        for customer in cls.customers:
-            if customer.full_name() == name:
+        for customer in cls.all_customers:
+            if customer._full_name() == name:
                 return customer
             else:
                 print("customer cannot be found")
 
     @classmethod
     def find_all_by_given_name(cls, name):
-        return [customer for customer in Customer.all() if customer.given_name == name]
+        return [customer for customer in Customer.all() if customer._given_name == name]
     
     def __repr__(self):
         return f"{self._given_name} {self._family_name}"
+    
+
+customer1= Customer("austin","mbogo")
+customer2= Customer("John","mbogo")
+
+print(customer1.find_by_name("austin mbogo"))
