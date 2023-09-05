@@ -1,4 +1,3 @@
-#create test for these codes and the pass should be how the codes are structured
 # imports review from the review file
 from review import Review
 class Restaurant:
