@@ -65,8 +65,8 @@ class Customer:
         return f"{self._given_name} {self._family_name}"
     
 
-customer1= Customer("austin","mbogo")
-customer2= Customer("John","mbogo")
+# customer1= Customer("austin","mbogo")
+# customer2= Customer("John","mbogo")
 
-print(Customer.find_by_name("austin mbogo"))
-print(Customer.find_all_by_given_name("John"))
+# print(Customer.find_by_name("austin mbogo"))
+# print(Customer.find_all_by_given_name("John"))

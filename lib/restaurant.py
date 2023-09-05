@@ -22,8 +22,8 @@ class Restaurant:
         return average
     
 
-restaurant1= Restaurant("highlands")
-restaurant2= Restaurant("lowlands")
+# restaurant1= Restaurant("highlands")
+# restaurant2= Restaurant("lowlands")
 
-print(restaurant1.average_rating())
-print(restaurant2.average_rating())
+# print(restaurant1.average_rating())
+# print(restaurant2.average_rating())

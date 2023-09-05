@@ -25,7 +25,7 @@ class Review:
         return f"{self._customer}, {self._restaurant}, {self._rating}"
 
 
-review1= Review("austin mbogo", "highlands", 3)
-review2= Review("John mbogo", "lowlands", 2)
+# review1= Review("austin mbogo", "highlands", 3)
+# review2= Review("John mbogo", "lowlands", 2)
 
-print(review1.all())
+# print(review1.all())
