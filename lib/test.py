@@ -1,6 +1,7 @@
 import unittest
 from review import Review
-
+from customer import Customer
+from restaurant import Restaurant
 
 class TestReview(unittest.TestCase):
 
@@ -23,9 +24,6 @@ class TestReview(unittest.TestCase):
 if __name__ == "__main__":
     unittest.main()
 
-import unittest
-from review import Review
-
 class TestRestaurant(unittest.TestCase):
 
     def test_import_review(self):
@@ -34,10 +32,6 @@ class TestRestaurant(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
-
-import unittest
-from review import Review
-from customer import Customer
 
 class TestRestaurant(unittest.TestCase):
 
@@ -60,4 +54,15 @@ class TestRestaurant(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
-   
+
+class TestRestaurant(unittest.TestCase):
+    def setUp(self):
+        self.restaurant1 = Restaurant("highlands")
+        self.restaurant2 = Restaurant("lowlands")
+
+    def test_average_rating(self):
+        # Add test cases here
+        pass
+
+if __name__ == '__main__':
+    unittest.main()
